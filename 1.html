@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Input Comparison</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color:green;
+        }
+
+        #resultDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Can you guess the suprise?</h1>
+        <button onclick="checkText()">have a guess??</button>
+        <button onclick="redirectToPage()">if not no issue touch me</button>
+
+        <!-- This element will display the result of the comparison -->
+        <div id="resultDisplay"></div>
+    </div>
+
+    <script>
+        // Predefined stored text
+        const storedText = "panda doll";
+
+        function checkText() {
+            // Prompt the user to enter a text
+            const userInput = prompt("Enter your guess to compare:");
+
+            // Check if the input matches the stored text
+            if (userInput) {
+                if (userInput.toLowerCase() === storedText.toLowerCase()) {
+                    document.getElementById('resultDisplay').innerText = "baane..........";
+                } else {
+                    document.getElementById('resultDisplay').innerText = "edi cheta kadu";
+                }
+            } else {
+                document.getElementById('resultDisplay').innerText = "chi chi";
+            }
+        }
+
+        function redirectToPage() {
+            // Redirect to another HTML page
+            window.location.href = "2.html";
+        }
+    </script>
+</body>
+</html>

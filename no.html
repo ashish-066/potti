@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Text and Buttons</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 100px;
+        color: yellow;">endukey neeku edava overaction musukoni velli yes kottu</h1>
+        <button onclick="goToPage('1.html')">back</button>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;  // Redirects to the specified page
+        }
+    </script>
+</body>
+</html>
